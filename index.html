@@ -1,22 +1,692 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <link rel="stylesheet" href="/asssets/dist/css/tailwind.min.css">
+  <link rel="stylesheet" href="/asssets/dist/css/style.css">
+  <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+  <script>
+    tailwind.config = {
+      theme: {
+        container: {
+          center: true,
+          padding: '1rem',
+        },
+        extend: {
+          colors: {
+            primary: {
+              50: ' #E9F8F3',
+              100: '#D2F0E7',
+              200: '#A6E1CF',
+              300: '#A6E1CF',
+              400: '#4DC39E',
+              500: '#20B486',
+              600: '#1A906B',
+              700: '#136C50',
+              800: '#0D4836',
+              900: '#06241B',
+            },
+          }
 
-  <title>HTML</title>
-  
-  <!-- HTML -->
-  
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
-  <p>Nothing to see here...</p>
-  <!-- Project -->
-  <script src="main.js"></script>
+
+  <header class=" fixed w-full top-0 bg-gray-900 ">
+    <div class="container mx-auto px-4 h-full">
+      <div class="flex justify-between items-center h-full">
+        <a href="" class="logo">
+          <h3 class="text-white">ASDI</h3>
+        </a>
+        <input type="checkbox" name="" id="menu">
+        <label for="menu" id="humberger" class="block sm:hidden"></label>
+        <!-- mobile menu -->
+        <nav class="mobile absolute top-full bg-gray-800 w-full left-0 h-screen block sm:hidden">
+          <ul class="flex flex-col gap-2">
+            <li><a href="" class="text-white px-2 py-3 hover:bg-gray-700 w-full block transition text-center font-bold">হোম</a></li>
+            <li><a href="" class="text-white px-2 py-3 hover:bg-gray-700 w-full block transition text-center font-bold">আমাদের সম্পর্কে</a></li>
+            <li><a href="" class="text-white px-2 py-3 hover:bg-gray-700 w-full block transition text-center font-bold">যোগাযোগ</a></li>
+            <li><a href="" class="text-white px-2 py-3 hover:bg-gray-700 w-full block transition text-center font-bold">সফলতার গল্প</a></li>
+            <li><a href="" class="text-white px-2 py-3 hover:bg-gray-700 w-full block transition text-center font-bold">ভর্তি</a></li>
+
+          </ul>
+        </nav>
+        <!-- desktop-menu -->
+        <nav class="deskmenu hidden sm:block">
+          <ul>
+            <li><a href="">হোম</a></li>
+            <li><a href="">আমাদের সম্পর্কে</a></li>
+            <li><a href="">যোগাযোগ</a></li>
+            <li><a href="">সফলতার গল্প</a></li>
+            <li class="relative desk-drop-container"><a href="#">কোর্স সমূহ</a>
+              <ul class="menu-dropdown absolute bg-gray-700 text-sm  flex-col top-12 w-36 right-0 pb-4">
+                <li><a href="#" class="block py-.5 hover:bg-gray-600 text-center">ভিডিও ইডিটিং</a></li>
+                <li><a href="#" class="block py-.5 hover:bg-gray-600 text-center">ডিজিটাল মার্কেটিং</a></li>
+                <li><a href="#" class="block py-.5 hover:bg-gray-600 text-center">এসইও</a></li>
+                <li><a href="#" class="block py-.5 hover:bg-gray-600 text-center">গ্রাফিক্স ডিজাইন</a></li>
+                <li><a href="#" class="block py-1 hover:bg-gray-600 text-center">অফিস এপ্লিকেশন</a></li>
+
+
+              </ul>
+
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+  <div class="gap"></div>
+  <section class="relative bg-[url(/images/1669563463600.jpg)] bg-cover bg-center bg-no-repeat">
+    <div class="absolute inset-0 bg-black/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/50 sm:to-white/25"></div>
+
+    <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+      <div class="max-w-xl text-center sm:text-left">
+        <h1 class="text-3xl font-extrabold sm:text-5xl text-primary-500">
+          দক্ষতা  উন্নয়ন করি
+          
+
+          <strong class="block font-extrabold text-red-500">
+            উন্নত দেশের সপ্ন দেখি
+          </strong>
+           <strong class="block font-extrabold text-teal-500">
+             অর্থনীতিতে অবদান রাখি
+           </strong>
+        </h1>
+
+        <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed text-white">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
+          tenetur fuga ducimus numquam ea!
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4 text-center">
+          <a href="#" class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
+            ভর্তি হোন
+          </a>
+
+          <a href="#" class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
+        <div class="mx-auto max-w-lg text-center lg:mx-0 lg:text-left">
+          <h2 class="text-3xl font-bold sm:text-4xl">কোর্স সমূহ</h2>
+
+          <p class="mt-4 text-gray-600"> এটিটিআই
+            আপনার বিশস্ততার সঙ্গী, আমাদের যেকোনো কোর্স এ এডমিশন নিলেই পাচ্ছেন কিছু বোনাস সুবিধা।
+          </p>
+
+          <a class="mt-8 inline-flex items-center rounded border border-indigo-600 bg-indigo-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500" href="/get-started">
+            <span class="text-sm font-medium"> ভর্তি হোন </span>
+
+            <svg class="ml-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <a class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring" href="/accountant">
+            <span class="inline-block rounded-lg bg-gray-50 p-3">
+              <i class="ri-window-line"></i>
+            </span>
+
+            <h2 class="mt-2 font-bold">ওয়েব ডিজাইন</h2>
+
+            <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+              Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </a>
+
+          <a class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring" href="/accountant">
+            <span class="inline-block rounded-lg bg-gray-50 p-3">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+              </svg>
+            </span>
+
+            <h2 class="mt-2 font-bold">গ্রাফিক ডিজাইন</h2>
+
+            <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+              Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </a>
+
+          <a class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring" href="/accountant">
+            <span class="inline-block rounded-lg bg-gray-50 p-3">
+              <i class="ri-film-line"></i>
+            </span>
+
+            <h2 class="mt-2 font-bold">ভিডিও ইডিটিং</h2>
+
+            <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+              Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </a>
+
+          <a class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring" href="/accountant">
+            <span class="inline-block rounded-lg bg-gray-50 p-3">
+              <i class="ri-windows-fill"></i>
+            </span>
+
+            <h2 class="mt-2 font-bold">অফিস এপ্লিকেশন</h2>
+
+            <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+              Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </a>
+
+          <a class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring" href="/accountant">
+            <span class="inline-block rounded-lg bg-gray-50 p-3">
+              <i class="ri-kakao-talk-line"></i>
+            </span>
+
+            <h2 class="mt-2 font-bold">স্পোকেন ইংলিশ</h2>
+
+            <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+              Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </a>
+
+          <a class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring" href="/accountant">
+            <span class="inline-block rounded-lg bg-gray-50 p-3">
+              <i class="ri-search-eye-line"></i>
+            </span>
+
+            <h2 class="mt-2 font-bold">এসইও</h2>
+
+            <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
+              Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-16">
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+          <img alt="Party" src="/images/pic.jpg" class="absolute inset-0 h-full w-full object-cover" />
+        </div>
+
+        <div class="lg:py-24">
+          <h2 class="text-3xl font-bold sm:text-4xl">প্র্যাকটিক্যাল প্রজেক্টের মাধ্যমে শিক্ষাদান আমাদের বিশেষত্ব</h2>
+
+          <p class="mt-4 text-gray-600">
+            প্র্যাকটিক্যাল প্রোজেক্ট ছাড়া যেকোনো শিক্ষা অপূর্ণ। এক জরিপে দেখা গেছে, কেবল হাতে-কলমে শিক্ষার অভাবে চাকরি জীবনে ভোগান্তির শিকার হন ৬৭ শতাংশ মানুষ। তাছাড়া মার্কেটপ্লেস বা লোকাল জবে একটি পোর্টফোলিও না থাকলে কাজ পেতেও অনেক সময় লাগে। সব ক্যারিয়ারের শুরুতে কম-বেশি সবাই এই সমস্যায় ভোগেন। তাই ক্রিয়েটিভ আইটি বিশ্বাস করে হাতে-কলমে শিক্ষার উপর। এজন্যই আমাদের প্রতিটি কোর্সে রাখা হয়েছে পর্যাপ্ত সংখ্যক প্রজেক্ট। আপনি যদি আমাদের দক্ষ মেন্টরের তত্ত্বাবধানে সবগুলো প্রজেক্ট শেষ করেন, তাহলে কোর্স চলাকালীন সময়েই নিজের একটি ভালো পোর্টফোলিও তৈরি করতে পারবেন।
+          </p>
+
+          <a href="#" class="mt-8 inline-flex items-center rounded border border-indigo-600 bg-indigo-600 px-8 py-3 text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500">
+            <span class="text-sm font-medium"> আরো জানুন </span>
+
+            <svg class="ml-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
+        <div class="relative z-10 lg:py-16">
+          <div class="relative h-64 sm:h-80 lg:h-full">
+            <img alt="House" src="/images/practice3.jpg" class="absolute inset-0 h-full w-full object-cover" />
+          </div>
+        </div>
+
+        <div class="relative flex items-center bg-gray-100">
+          <span class="hidden lg:absolute lg:inset-y-0 lg:-left-16 lg:block lg:w-16 lg:bg-gray-100"></span>
+
+          <div class="p-8 sm:p-16 lg:p-24">
+            <h2 class="text-2xl font-bold sm:text-3xl">
+              অংশ নিন ফ্রি সেমিনারে
+            </h2>
+
+            <p class="mt-4 text-gray-600">
+              ফ্রিল্যান্সিং-এর জন্য কোন কোর্স করবেন, সিদ্ধান্ত নিতে পারছেন না? জয়েন করুন আমাদের ফ্রি সেমিনারে। বিষয়ভিত্তিক এই সেমিনারগুলোতে প্রতিটি কোর্সের সম্ভাবনা সম্পর্কে জানতে পারবেন। তাছাড়া সেমিনারে উপস্থিত এক্সপার্ট কাউন্সেলরের সঙ্গে কথা বলে আপনি যথাযথ কোর্স বেছে নেওয়ার সিদ্ধান্ত নিতে পারবেন সহজেই।
+            </p>
+
+            <a href="#" class="mt-8 inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <section class="bg-gray-100">
+    <div class="mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0">
+      <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
+        <div class="max-w-xl text-center sm:text-left">
+          <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+            স্টুডেন্ট রিভিউ
+            <br class="hidden sm:block lg:hidden" />
+            <span class="text-2xl">এটিটিআই সম্পর্কে স্টুডেন্টদের মতামত</span>
+          </h2>
+
+          <p class="mt-4 text-gray-500">
+            আমাদের স্টুডেন্ট গুলো ইতিমধ্যে ফাইবার, গ্রাফিকরিভার, ফ্রিপিক সহ বিভিন্ন মার্কেটপ্লেসের ক্লাইন্টদের সাথে কাজ করে যাচ্ছে দক্ষতার সাথে। আমরা আপনাকে একজন দক্ষ গ্রাফিক ডিজাইনার হওয়ার এবং ফ্রিল্যান্সিং করার নিশ্চয়তা দিচ্ছি।st
+          </p>
+
+          <div class="hidden lg:mt-8 lg:flex lg:gap-4">
+            <button class="prev-button rounded-full border border-pink-600 p-3 text-pink-600 hover:bg-pink-600 hover:text-white">
+              <span class="sr-only">Previous Slide</span>
+              <svg class="h-5 w-5 -rotate-180 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              </svg>
+            </button>
+
+            <button class="next-button rounded-full border border-pink-600 p-3 text-pink-600 hover:bg-pink-600 hover:text-white">
+              <span class="sr-only">Next Slide</span>
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="-mx-6 lg:col-span-2 lg:mx-0">
+          <div class="swiper-container !overflow-hidden">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <blockquote class="flex h-full flex-col justify-between bg-white p-12">
+                  <div>
+                    <div class="flex gap-0.5 text-green-500">
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    </div>
+
+                    <div class="mt-4">
+                      <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
+                        Stayin' Alive
+                      </p>
+
+                      <p class="mt-4 leading-relaxed text-gray-500">
+                        No, Rose, they are not breathing. And they have no arms or
+                        legs … Where are they? You know what? If we come across
+                        somebody with no arms or legs, do we bother resuscitating
+                        them? I mean, what quality of life do we have there?
+                      </p>
+                    </div>
+                  </div>
+
+                  <footer class="mt-8 text-sm text-gray-500">
+                    &mdash; Michael Scott
+                  </footer>
+                </blockquote>
+              </div>
+
+              <div class="swiper-slide">
+                <blockquote class="flex h-full flex-col justify-between bg-white p-12">
+                  <div>
+                    <div class="flex gap-0.5 text-green-500">
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    </div>
+
+                    <div class="mt-4">
+                      <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
+                        Stayin' Alive
+                      </p>
+
+                      <p class="mt-4 leading-relaxed text-gray-500">
+                        No, Rose, they are not breathing. And they have no arms or
+                        legs … Where are they? You know what? If we come across
+                        somebody with no arms or legs, do we bother resuscitating
+                        them? I mean, what quality of life do we have there?
+                      </p>
+                    </div>
+                  </div>
+
+                  <footer class="mt-8 text-sm text-gray-500">
+                    &mdash; Michael Scott
+                  </footer>
+                </blockquote>
+              </div>
+
+              <div class="swiper-slide">
+                <blockquote class="flex h-full flex-col justify-between bg-white p-12">
+                  <div>
+                    <div class="flex gap-0.5 text-green-500">
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+
+                      <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    </div>
+
+                    <div class="mt-4">
+                      <p class="text-2xl font-bold text-pink-600 sm:text-3xl">
+                        Stayin' Alive
+                      </p>
+
+                      <p class="mt-4 leading-relaxed text-gray-500">
+                        No, Rose, they are not breathing. And they have no arms or
+                        legs … Where are they? You know what? If we come across
+                        somebody with no arms or legs, do we bother resuscitating
+                        them? I mean, what quality of life do we have there?
+                      </p>
+                    </div>
+                  </div>
+
+                  <footer class="mt-8 text-sm text-gray-500">
+                    &mdash; Michael Scott
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex justify-center gap-4 lg:hidden">
+        <button aria-label="Previous slide" class="prev-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:text-white">
+          <svg class="h-5 w-5 -rotate-180 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+          </svg>
+        </button>
+
+        <button aria-label="Next slide" class="next-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:text-white">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- team  -->
+  
+  <!-- component -->
+<!-- MDI Icons -->
+
+
+<!-- Page Container -->
+<div class="flex items-center justify-center min-h-screen bg-white py-48">
+    <div class="flex flex-col">
+        <!-- Notes -->
+        <span class="text-center font-bold my-10 opacity-30">
+            MDI (npm i @mdi/font) reuqired for all icons
+
+            <hr class="my-4">
+
+            <a href="https://egoistdeveloper.github.io/twcss-to-sass-playground/" target="_blank" class="text-blue-600">
+                Convetert to SASS
+            </a>
+        </span>
+
+        <div class="flex flex-col mt-8">
+            <!-- Meet the Team -->
+            <div class="container max-w-7xl px-4">
+                <!-- Section Header -->
+                <div class="flex flex-wrap justify-center text-center mb-24">
+                    <div class="w-full lg:w-6/12 px-4">
+                        <!-- Header -->
+                        <h1 class="text-gray-900 text-4xl font-bold mb-8">
+                            Meet the Team
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="text-gray-700 text-lg font-light">
+                            With over 100 years of combined experience, we've got a well-seasoned team at the helm.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Members -->
+                <div class="flex flex-wrap">
+                    <!-- Member #1 -->
+
+                    <!-- Member #2 -->
+
+                    <!-- Member #3 -->
+                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div class="flex flex-col">
+                            <!-- Avatar -->
+                            <a href="#" class="mx-auto">
+                                <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                    src="https://images.unsplash.com/photo-1634193295627-1cdddf751ebf?fit=clamp&w=400&h=400&q=80">
+                            </a>
+
+                            <!-- Details -->
+                            <div class="text-center mt-6">
+                                <!-- Name -->
+                                <h1 class="text-gray-900 text-xl font-bold mb-1">
+                                    Kenji Milton
+                                </h1>
+
+                                <!-- Title -->
+                                <div class="text-gray-700 font-light mb-2">
+                                    Team Memeber
+                                </div>
+
+                                <!-- Social Icons -->
+                                <div class="flex items-center justify-center opacity-50 hover:opacity-100
+                                transition-opacity duration-300">
+                                    <!-- Linkedin -->
+                                    <a href="#" class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                                        <i class="ri-linkedin-box-fill text-indigo-700 mx-auto mt-2"></i>
+                                    </a>
+
+                                    <!-- Twitter -->
+                                    <a href="#" class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                                                                                <i class="ri-twitter-fill text-blue-700 mx-auto mt-2"></i>
+
+                                    </a>
+
+                                    <!-- Instagram -->
+                                    <a href="#" class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+                                                                                                                      <i class="ri-facebook-circle-fill text-blue-700 mx-auto mt-2"></i>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div class="flex flex-col">
+                            <!-- Avatar -->
+                            <a href="#" class="mx-auto">
+                                <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                    src="https://images.unsplash.com/photo-1634193295627-1cdddf751ebf?fit=clamp&w=400&h=400&q=80">
+                            </a>
+
+                            <!-- Details -->
+                            <div class="text-center mt-6">
+                                <!-- Name -->
+                                <h1 class="text-gray-900 text-xl font-bold mb-1">
+                                    Kenji Milton
+                                </h1>
+
+                                <!-- Title -->
+                                <div class="text-gray-700 font-light mb-2">
+                                    Team Memeber
+                                </div>
+
+                                <!-- Social Icons -->
+                                <div class="flex items-center justify-center opacity-50 hover:opacity-100
+                                transition-opacity duration-300">
+                                    <!-- Linkedin -->
+                                    <a href="#" class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                                        <i class="ri-linkedin-box-fill text-indigo-700 mx-auto mt-2"></i>
+                                    </a>
+
+                                    <!-- Twitter -->
+                                    <a href="#" class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                                                                                <i class="ri-twitter-fill text-blue-700 mx-auto mt-2"></i>
+
+                                    </a>
+
+                                    <!-- Instagram -->
+                                    <a href="#" class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+                                                                                                                      <i class="ri-facebook-circle-fill text-blue-700 mx-auto mt-2"></i>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
+                        <div class="flex flex-col">
+                            <!-- Avatar -->
+                            <a href="#" class="mx-auto">
+                                <img class="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                                    src="https://images.unsplash.com/photo-1634193295627-1cdddf751ebf?fit=clamp&w=400&h=400&q=80">
+                            </a>
+
+                            <!-- Details -->
+                            <div class="text-center mt-6">
+                                <!-- Name -->
+                                <h1 class="text-gray-900 text-xl font-bold mb-1">
+                                    Kenji Milton
+                                </h1>
+
+                                <!-- Title -->
+                                <div class="text-gray-700 font-light mb-2">
+                                    Team Memeber
+                                </div>
+
+                                <!-- Social Icons -->
+                                <div class="flex items-center justify-center opacity-50 hover:opacity-100
+                                transition-opacity duration-300">
+                                    <!-- Linkedin -->
+                                    <a href="#" class="flex rounded-full hover:bg-indigo-50 h-10 w-10">
+                                        <i class="ri-linkedin-box-fill text-indigo-700 mx-auto mt-2"></i>
+                                    </a>
+
+                                    <!-- Twitter -->
+                                    <a href="#" class="flex rounded-full hover:bg-blue-50 h-10 w-10">
+                                                                                <i class="ri-twitter-fill text-blue-700 mx-auto mt-2"></i>
+
+                                    </a>
+
+                                    <!-- Instagram -->
+                                    <a href="#" class="flex rounded-full hover:bg-orange-50 h-10 w-10">
+                                                                                                                      <i class="ri-facebook-circle-fill text-blue-700 mx-auto mt-2"></i>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member #4 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 32,
+        autoplay: {
+          delay: 8000,
+        },
+        breakpoints: {
+          640: {
+            centeredSlides: true,
+            slidesPerView: 1.25,
+          },
+          1024: {
+            centeredSlides: false,
+            slidesPerView: 1.5,
+          },
+        },
+        navigation: {
+          nextEl: '.next-button',
+          prevEl: '.prev-button',
+        },
+      })
+    })
+  </script>
+
+
+
+
+
+
+
 </body>
+
 </html>
