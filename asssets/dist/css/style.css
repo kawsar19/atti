@@ -1,0 +1,112 @@
+@font-face {
+  font-family: kalporosh;
+  src: url(../../fonts/Kalpurush.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: kalporosh;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+header {
+  
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+  
+}
+.gap {
+  height: 70px;
+}
+nav.mobile {
+  transform: translateX(-100%);
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+nav.deskmenu {
+  
+}
+nav.deskmenu ul{
+  display: flex;
+  
+}nav.deskmenu ul li {
+  
+}nav.deskmenu ul li a{
+  color: #fff;
+  padding: 10px 20px;
+}nav.deskmenu ul li a:hover{
+  
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked ~ nav {
+ transform: translateX(0);
+ opacity: 1;
+ visibility: visible;
+}
+
+#humberger {
+  height: 3px;
+  width: 30px;
+  background: #fff;
+  position: relative;
+  
+}
+
+#humberger::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  top: 8px;
+  background: #fff;
+}
+#humberger::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  bottom: 8px;
+  background: #fff;
+}
+
+.menu-dropdown {
+  display: none !important;
+  -webkit-animation-name: slideUpIn;
+  -moz-animation-name: slideUpIn;
+  -o-animation-name: slideUpIn;
+  animation-name: slideUpIn;
+  animation-duration:.3s;
+  animation-fill-mode: both;
+}
+.desk-drop-container:hover .menu-dropdown{
+  display: flex !important;
+  
+}
+
+
+
+@keyframes slideUpIn {
+  0% {
+    transform: translateY(-1.25rem);
+    }
+  100%{ 
+    transform: translateX(0);
+    
+  }
+  0% {
+    transform: translateY(1.25rem);
+  }
+}
